@@ -1,13 +1,13 @@
-package android
+// ❌ REMOVE the `package android` statement
 
 group 'br.com.keyboard_utils'
 version '1.0-SNAPSHOT'
 
 buildscript {
-    ext.kotlin_version = '1.8.22' // Update to latest stable version
+    ext.kotlin_version = '1.8.22' // Update to a stable version
     repositories {
         google()
-        mavenCentral() // Replaces jcenter()
+        mavenCentral()
     }
 
     dependencies {
@@ -19,10 +19,11 @@ buildscript {
 rootProject.allprojects {
     repositories {
         google()
-        mavenCentral() // Replaces jcenter()
+        mavenCentral()
     }
 }
 
+// ✅ Ensure plugins are applied correctly
 apply plugin: 'com.android.library'
 apply plugin: 'kotlin-android'
 
